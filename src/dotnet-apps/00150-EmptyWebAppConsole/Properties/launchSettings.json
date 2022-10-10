@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "EmptyWebAppBreakPoint": {
+    "EmptyWebAppConsole": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
