@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebAppCookieAuth.Models;
 
-namespace WebApp_UnderTheHood.Pages.Account
+namespace WebAppCookieAuthContextPrep.Pages.Account
 {
     public class LoginModel : PageModel
     {
