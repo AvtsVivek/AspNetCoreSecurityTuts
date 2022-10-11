@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using WebAppCookieAuthContextPrep;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
-builder.Services.AddAuthentication().AddCookie(Constants.AuthTypeSchemeName, options =>
+builder.Services.AddAuthentication(Constants.AuthTypeSchemeName).AddCookie(Constants.AuthTypeSchemeName, options =>
 {
     options.Cookie.Name = Constants.AuthTypeSchemeName;
 });
@@ -21,10 +22,25 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.Use(async (context, next) =>
+{
+
+    if (context.User.Identity == null)
+        Debugger.Break();
+    Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
+    await next.Invoke();
+    Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
+    if (context.User.Identity == null)
+        Debugger.Break();
+});
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

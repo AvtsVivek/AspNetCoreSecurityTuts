@@ -34,8 +34,12 @@ namespace WebAppCookieAuthContextPrep.Pages.Account
                 // We are creating the claims principal, which is the security context.
                 var claimsPrincipal = new ClaimsPrincipal(identity);
 
+                Console.WriteLine($"The authenticated status {HttpContext.User.Identity!.IsAuthenticated}");
+
                 await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal);
 
+                Console.WriteLine($"The authenticated status {HttpContext.User.Identity!.IsAuthenticated}");
+                
                 return RedirectToPage("/Index");
             }
 
