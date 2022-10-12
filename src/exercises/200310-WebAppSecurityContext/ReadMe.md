@@ -34,7 +34,23 @@ builder.Services.AddAuthentication(Constants.AuthTypeSchemeName).AddCookie(Const
 
 - Also a few middle wares are sprinkled here are there, to console writeout, IsAuthenticated flag. 
 
-- 
+- So now SignInAsync here is serializing the claimsPrincipal, encrypt it, and then  save that as a cookie in the http context and send that back in the response.
 
+```cs
+await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal);
+```
+
+- The above will throw exception if you do not configure a handler. 
+- You should configure a handler at the composition root, in the Program.cs file as follows.
+
+```cs 
+var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
+authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
+{
+    options.Cookie.Name = Constants.AuthTypeSchemeName;
+});
+```
+
+- If you comment that out, you will see an exception being thrown by HttpContext.SignInAsync. Try it and see.
 
 

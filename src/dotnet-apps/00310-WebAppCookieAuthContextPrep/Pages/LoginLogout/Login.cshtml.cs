@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 using System.Security.Claims;
 using WebAppCookieAuth.Models;
 
@@ -16,9 +17,9 @@ namespace WebAppCookieAuthContextPrep.Pages.Account
 
         }
 
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid) return Page();
+            if (!ModelState.IsValid) return Page(); // Return the same view.
 
             // Verify the credential
             if (UserCreds.UserName == "admin" && UserCreds.Password == "123")
@@ -36,14 +37,25 @@ namespace WebAppCookieAuthContextPrep.Pages.Account
 
                 // Console.WriteLine($"The authenticated status {HttpContext.User.Identity!.IsAuthenticated}");
 
-                await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal);
+                try
+                {
+                    // So now SignInAsync here is serializing the claimsPrincipal, encrypt it, and then 
+                    // save that as a cookie and send that back in the response.
+                    await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal);
+                }
+                catch (Exception ex)
+                {
+                    Debugger.Break();
+                    var message = ex.Message;
+                    throw new Exception(message);
+                }
 
                 Console.WriteLine($"The authenticated status 4 {HttpContext.User.Identity!.IsAuthenticated}");
                 
                 return RedirectToPage("/Index");
             }
 
-            return Page();
+            return Page(); // Return the same view;
         }
     }
 }

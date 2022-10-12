@@ -7,11 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
-var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
-authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
-{
-    options.Cookie.Name = Constants.AuthTypeSchemeName;
-});
+//var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
+//authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
+//{
+//    options.Cookie.Name = Constants.AuthTypeSchemeName;
+//});
 
 var app = builder.Build();
 
