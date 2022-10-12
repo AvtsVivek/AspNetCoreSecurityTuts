@@ -24,11 +24,11 @@ app.Use(async (context, next) =>
 
 app.Run(async context =>
 {
-    Debugger.Break();
+    // Debugger.Break();
     Console.WriteLine("         333 - Enter");
     await context.Response.WriteAsync("Hello !!!!");
     Console.WriteLine("         333 - Exit");
-    Debugger.Break();
+    // Debugger.Break();
 });
 
 app.Run();
