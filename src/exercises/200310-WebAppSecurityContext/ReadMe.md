@@ -53,4 +53,29 @@ authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
 
 - If you comment that out, you will see an exception being thrown by HttpContext.SignInAsync. Try it and see.
 
+- Auth middle ware. This middleware, looks at the request, checks if there are any cookies related to authentication. Then reads them, and then populates the security context.
+
+- Take a look at [this so answer](https://stackoverflow.com/a/74038922/1977871).
+
+```cs
+app.UseAuthentication();
+```
+
+- So the **UseAuthentication** middle ware reads the Auth Cookie if any. 
+
+- Also note the following code, where in we are printing out the claims that the authenticated user has when the user is authenciated 
+- Run the app, do the login to get Authenticated, then check the output corresponding to the following code.
+
+```cs
+app.Use(async (context, next) =>
+{
+    Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
+    if (context.User.Identity.IsAuthenticated)
+        context.User.Claims.ToList().ForEach(x => Console.WriteLine(x));
+    
+    await next.Invoke();
+    Console.WriteLine($"The authenticated status 3 {context.User.Identity!.IsAuthenticated}");
+});
+```
+![Visual Studio 2022](./images/20WebPage50.jpg)
 
