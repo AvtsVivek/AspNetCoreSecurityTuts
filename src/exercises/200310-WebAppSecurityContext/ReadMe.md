@@ -26,11 +26,15 @@
 - Next configure a service like this the program.cs file. Basically we are adding cookie authentication
 
 ```
-builder.Services.AddAuthentication().AddCookie(Constants.AuthTypeSchemeName, options =>
+builder.Services.AddAuthentication(Constants.AuthTypeSchemeName).AddCookie(Constants.AuthTypeSchemeName, options =>
 {
     options.Cookie.Name = Constants.AuthTypeSchemeName;
 });
 ```
+
+- Also a few middle wares are sprinkled here are there, to console writeout, IsAuthenticated flag. 
+
+- 
 
 
 

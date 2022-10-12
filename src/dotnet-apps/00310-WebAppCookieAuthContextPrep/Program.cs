@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
-builder.Services.AddAuthentication(Constants.AuthTypeSchemeName).AddCookie(Constants.AuthTypeSchemeName, options =>
+var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
+authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
 {
     options.Cookie.Name = Constants.AuthTypeSchemeName;
 });
@@ -24,14 +25,9 @@ if (!app.Environment.IsDevelopment())
 
 app.Use(async (context, next) =>
 {
-
-    if (context.User.Identity == null)
-        Debugger.Break();
-    Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
+    // Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
     await next.Invoke();
-    Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
-    if (context.User.Identity == null)
-        Debugger.Break();
+    Console.WriteLine($"The authenticated status 1 {context.User.Identity!.IsAuthenticated}");
 });
 
 
@@ -40,7 +36,21 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.Use(async (context, next) =>
+{
+    // Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
+    await next.Invoke();
+    Console.WriteLine($"The authenticated status 2 {context.User.Identity!.IsAuthenticated}");
+});
+
 app.UseAuthentication();
+
+app.Use(async (context, next) =>
+{
+    // Console.WriteLine($"The authenticated status {context.User.Identity!.IsAuthenticated}");
+    await next.Invoke();
+    Console.WriteLine($"The authenticated status 3 {context.User.Identity!.IsAuthenticated}");
+});
 
 app.UseAuthorization();
 
