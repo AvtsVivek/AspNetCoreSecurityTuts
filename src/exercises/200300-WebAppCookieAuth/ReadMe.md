@@ -22,7 +22,7 @@ dotnet sln add WebAppCookieAuth.csproj
 
 - Update the _Layout page to include a login link in the UI
 
-- Also add User class in Modles folder.
+- Also add User class in Models folder.
 
 - Then run the app, go to login page by clicking the login link in the home page.
 
