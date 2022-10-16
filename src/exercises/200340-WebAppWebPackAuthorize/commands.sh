@@ -22,6 +22,8 @@ cd src/dotnet-apps/00340-WebAppWebPackAuthorize
 
 Set-Location ClientApp
 
+npm install
+
 npm run wpbuild
 
 Set-Location ..

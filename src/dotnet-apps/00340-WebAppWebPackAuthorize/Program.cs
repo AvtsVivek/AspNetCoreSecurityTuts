@@ -1,7 +1,18 @@
+using System.Diagnostics;
+using WebAppWebPackAuthorize;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
+authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
+{
+    options.Cookie.Name = Constants.AuthTypeSchemeName;
+    options.LoginPath = "/LoginLogout/LogIn";
+    // options.LogoutPath = "/Account/LogOff";
+});
 
 var app = builder.Build();
 
@@ -18,6 +29,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

@@ -7,7 +7,9 @@
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AspNetWebAppWebPack.styles.css" asp-append-version="true" /> *@
-    <script src="~/dist/main.build.js" defer></script>
+    <script src="~/dist/loadjquery.build.js" ></script>
+    <script src="~/dist/main.build.js" defer ></script>
+    <script src="~/dist/site.build.js"  ></script>
 </head>
 <body>
     <header>
@@ -26,7 +28,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                                                <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/LoginLogout/Login">Login</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/JQueryTests">Jquery Tests</a>
                         </li>
                     </ul>
