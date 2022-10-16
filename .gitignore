@@ -458,3 +458,5 @@ __azurite_db_table__.json
 # But in production scenarios, .terraform.lock.hcl should NOT be git ignored. 
 # It should be always checked in.
 .terraform.lock.hcl
+
+dist/
