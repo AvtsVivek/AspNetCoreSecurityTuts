@@ -41,6 +41,9 @@ await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal);
 ```
 
 - The above will throw exception if you do not configure a handler. 
+
+![Sign in Exception](./images/20WebPage50.jpg)
+
 - You should configure a handler at the composition root, in the Program.cs file as follows.
 
 ```cs 
@@ -77,5 +80,5 @@ app.Use(async (context, next) =>
     Console.WriteLine($"The authenticated status 3 {context.User.Identity!.IsAuthenticated}");
 });
 ```
-![Visual Studio 2022](./images/20WebPage50.jpg)
+![Claims](./images/20WebPage50.jpg)
 
