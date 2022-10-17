@@ -89,3 +89,4 @@ var identity = new ClaimsIdentity(claims, Constants.AuthTypeSchemeName);
 - Now logout and login again. If logout is not implimented yet, then Run the app, press F12 and delete the Auth cookie. Theis enables you to  login again.
 
 - Now try to acces the Hr Page. 
+- Note that we have added an access denied page as well.
