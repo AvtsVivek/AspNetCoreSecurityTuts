@@ -6,13 +6,29 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
-authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
+var authenticationBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
+authenticationBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
 {
     options.Cookie.Name = Constants.AuthTypeSchemeName;
     options.LoginPath = "/LoginLogout/LogIn";
+    options.AccessDeniedPath = "/AccessDenied";
     // options.LogoutPath = "/Account/LogOff";
 });
+
+var authorizationBuilder = builder.Services.AddAuthorization(authorizationOptions => {
+
+    // authorizationOptions.AddPolicy("AdminOnly",
+    //     policy => policy.RequireClaim("Admin"));
+
+    authorizationOptions.AddPolicy("MustBelongToHrDept",
+        policy => policy.RequireClaim("Dept", "Hr"));
+
+    // authorizationOptions.AddPolicy("HRManagerOnly", policy => policy
+    //     .RequireClaim("Department", "HR")
+    //     .RequireClaim("Manager"));
+});
+
+
 
 var app = builder.Build();
 

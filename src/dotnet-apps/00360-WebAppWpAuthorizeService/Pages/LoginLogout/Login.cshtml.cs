@@ -27,7 +27,8 @@ namespace WebAppWpAuthorizeService.Pages.LoginLogout
                 // Creating the security context
                 var claims = new List<Claim> {
                     new Claim(ClaimTypes.Name, "admin"),
-                    new Claim(ClaimTypes.Email, "admin@mywebsite.com")
+                    new Claim(ClaimTypes.Email, "admin@mywebsite.com"),
+                    new Claim("Dept", "Hr")
                 };
 
                 var identity = new ClaimsIdentity(claims, Constants.AuthTypeSchemeName);
