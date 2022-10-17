@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/00380-WebAppWebPackLogout/WebAppWebPack
 
 cd ../../..
 
-cd src/dotnet-apps/00360-WebAppWpAuthorizeService
+cd src/dotnet-apps/00380-WebAppWebPackLogout
 
 Set-Location ClientApp
 

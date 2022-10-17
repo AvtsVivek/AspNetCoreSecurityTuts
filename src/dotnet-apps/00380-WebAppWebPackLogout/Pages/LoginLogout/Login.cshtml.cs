@@ -51,8 +51,6 @@ namespace WebAppWebPackLogout.Pages.LoginLogout
                     throw new Exception(message);
                 }
 
-                Console.WriteLine($"The authenticated status 4 {HttpContext.User.Identity!.IsAuthenticated}");
-
                 return RedirectToPage("/Index");
             }
 
