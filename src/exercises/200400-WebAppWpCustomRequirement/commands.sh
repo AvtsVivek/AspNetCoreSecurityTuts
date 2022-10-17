@@ -1,15 +1,15 @@
 
 cd ../../..
 
-cd src/exercises/200380-WebAppWebPackLogout
+cd src/exercises/200400-WebAppWpCustomRequirement
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/00380-WebAppWebPackLogout/WebAppWebPackLogout.csproj
+dotnet build ./../../dotnet-apps/00400-WebAppWpCustomRequirement/WebAppWpCustomRequirement.csproj
 
-dotnet run --project ./../../dotnet-apps/00380-WebAppWebPackLogout/WebAppWebPackLogout.csproj
+dotnet run --project ./../../dotnet-apps/00400-WebAppWpCustomRequirement/WebAppWpCustomRequirement.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/00380-WebAppWebPackLogout/WebAppWebPack
 
 cd ../../..
 
-cd src/dotnet-apps/00380-WebAppWebPackLogout
+cd src/dotnet-apps/00400-WebAppWpCustomRequirement
 
 Set-Location ClientApp
 
@@ -28,7 +28,7 @@ npm run wpbuild
 
 Set-Location ..
 
-dotnet build ./WebAppWebPackLogout.csproj
+dotnet build ./WebAppWpCustomRequirement.csproj
 
-dotnet run --project ./WebAppWebPackLogout.csproj
+dotnet run --project ./WebAppWpCustomRequirement.csproj
 
