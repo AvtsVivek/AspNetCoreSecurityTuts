@@ -459,6 +459,4 @@ __azurite_db_table__.json
 # It should be always checked in.
 .terraform.lock.hcl
 
-dist/
-
-dist
+**/wwwroot/dist
