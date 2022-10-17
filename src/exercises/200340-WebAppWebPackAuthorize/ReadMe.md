@@ -2,6 +2,8 @@
 
 - This builds from the previous example.
 
+- The reference is [project is here](https://github.com/AvtsVivek/webpacktuts/tree/main/code/600500-aspnetcore-webapp-webpack). 
+
 - Now Add Authorization.
 
 - So We add **[Authorize]** attribute to Index page. See Index.cshtml.cs file(IndexModel class)
@@ -14,4 +16,4 @@
 options.LoginPath = "/LoginLogout/LogIn";
 ```
 
-
+- 
