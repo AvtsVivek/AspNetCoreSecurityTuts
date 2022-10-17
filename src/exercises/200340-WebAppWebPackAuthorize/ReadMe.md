@@ -27,3 +27,7 @@ app.UseAuthorization();
 InvalidOperationException: Endpoint /Index contains authorization metadata, but a middleware was not found that supports authorization.
 Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
 ```
+
+- Also note that there is no **Authorization**(we are NOT talking about **Authentication**) Service configuration in the example. We will be adding that in the next example.
+
+- 
