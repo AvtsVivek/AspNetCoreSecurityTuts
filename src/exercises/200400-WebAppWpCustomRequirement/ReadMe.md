@@ -1,35 +1,30 @@
-# Introduces Authorization Service(not Authentication).
+# Introduces Custom Requirement.
 
 - This builds from the previous example.
 
-- In the _Layuout file, add the login status partial.
+- Impliment EmployeeConfirmationRequirement and its handler
 
-```html
-<div class="mr-2">
-    <partial name="_LoginStatusPartial" />
-</div>
+- Add Policy
+```cs
+authorizationOptions.AddPolicy("ConfirmedEnggOnly", policy => policy
+.RequireClaim("Dept", "Engg")
+// .RequireClaim("")
+.Requirements.Add(new EnggProbationRequirement(3)));
 ```
 
-- Then the login status partial itself.
+- Register Authorization Service with 
 
 ```cs
-@if (User.Identity!.IsAuthenticated)
-{
-    <form method="post" class="form-inline" asp-page="/LoginLogout/Logout">
-        Welcome @User.Identity.Name
-        <button type="submit" class="ml-2 btn btn-link">Logout</button>
-    </form>
-}
-else
-{
-    <a class="btn btn-link" asp-page="/LoginLogout/Login">Login</a>
-}
+builder.Services.AddSingleton<IAuthorizationHandler, EnggProbationRequirementHandler>();
 ```
 
-- Finally we need to have the logout page, which logsout like this.
-
+- Add Claims when we are logging in and creating the security context.
 ```cs
-await HttpContext.SignOutAsync("MyCookieAuth");
+new Claim("Dept", "Engg"),
+// new Claim("Manager", "true"),
+new Claim("EmploymentDate", "2022-02-01")
 ```
 
+- Add the engg page.
 
+- Now run, login and then access the page.

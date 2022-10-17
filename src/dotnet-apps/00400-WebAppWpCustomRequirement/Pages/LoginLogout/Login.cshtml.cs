@@ -28,7 +28,10 @@ namespace WebAppWpCustomRequirement.Pages.LoginLogout
                 var claims = new List<Claim> {
                     new Claim(ClaimTypes.Name, "admin"),
                     new Claim(ClaimTypes.Email, "admin@mywebsite.com"),
-                    new Claim("Dept", "Hr")
+                    new Claim("Dept", "Hr"),
+                    new Claim("Dept", "Engg"),
+                    // new Claim("Manager", "true"),
+                    new Claim("EmploymentDate", "2022-02-01")
                 };
 
                 var identity = new ClaimsIdentity(claims, Constants.AuthTypeSchemeName);

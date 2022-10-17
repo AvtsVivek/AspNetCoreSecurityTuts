@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
 using WebAppWpCustomRequirement;
+using WebAppWpCustomRequirement.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,12 +25,13 @@ var authorizationBuilder = builder.Services.AddAuthorization(authorizationOption
     authorizationOptions.AddPolicy("MustBelongToHrDept",
         policy => policy.RequireClaim("Dept", "Hr"));
 
-    // authorizationOptions.AddPolicy("HRManagerOnly", policy => policy
-    //     .RequireClaim("Department", "HR")
-    //     .RequireClaim("Manager"));
+    authorizationOptions.AddPolicy("ConfirmedEnggOnly", policy => policy
+        .RequireClaim("Dept", "Engg")
+        // .RequireClaim("")
+        .Requirements.Add(new EnggProbationRequirement(3)));
 });
 
-
+builder.Services.AddSingleton<IAuthorizationHandler, EnggProbationRequirementHandler>();
 
 var app = builder.Build();
 
