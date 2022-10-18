@@ -28,7 +28,9 @@ npm run wpbuild
 
 Set-Location ..
 
-dotnet build ./WebAppWpCustomRequirement.csproj
+dotnet build ./WebAppWpCookieExpiry.csproj
 
-dotnet run --project ./WebAppWpCustomRequirement.csproj
+dotnet run --project ./WebAppWpCookieExpiry.csproj
+
+################################################################################################
 

@@ -2,7 +2,8 @@
 
 - This builds from the previous example.
 
-- Add expiration to cookie as follows.
+- Add expiration to cookie as follows. Also demos SlidingExpiration concept.
+ 
 ```cs
 cookieAuthenticationOptions.ExpireTimeSpan = TimeSpan.FromSeconds(10);
 cookieAuthenticationOptions.SlidingExpiration = false;
