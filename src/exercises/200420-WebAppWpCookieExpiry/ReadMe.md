@@ -2,29 +2,12 @@
 
 - This builds from the previous example.
 
-- Impliment EmployeeConfirmationRequirement and its handler
-
-- Add Policy
+- Add expiration to cookie as follows.
 ```cs
-authorizationOptions.AddPolicy("ConfirmedEnggOnly", policy => policy
-.RequireClaim("Dept", "Engg")
-// .RequireClaim("")
-.Requirements.Add(new EnggProbationRequirement(3)));
+cookieAuthenticationOptions.ExpireTimeSpan = TimeSpan.FromSeconds(10);
+cookieAuthenticationOptions.SlidingExpiration = false;
 ```
 
-- Register Authorization Service with 
+- Now login, refresh and observe. Also change SlidingExpiration to true/false and then observe again.
 
-```cs
-builder.Services.AddSingleton<IAuthorizationHandler, EnggProbationRequirementHandler>();
-```
 
-- Add Claims when we are logging in and creating the security context.
-```cs
-new Claim("Dept", "Engg"),
-// new Claim("Manager", "true"),
-new Claim("EmploymentDate", "2022-02-01")
-```
-
-- Add the engg page.
-
-- Now run, login and then access the page.

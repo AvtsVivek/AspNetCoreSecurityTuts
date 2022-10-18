@@ -9,12 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 var authenticationBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
-authenticationBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
+authenticationBuilder.AddCookie(Constants.AuthTypeSchemeName, cookieAuthenticationOptions =>
 {
-    options.Cookie.Name = Constants.AuthTypeSchemeName;
-    options.LoginPath = "/LoginLogout/LogIn";
-    options.AccessDeniedPath = "/AccessDenied";
-    // options.LogoutPath = "/Account/LogOff";
+    cookieAuthenticationOptions.Cookie.Name = Constants.AuthTypeSchemeName;
+    cookieAuthenticationOptions.LoginPath = "/LoginLogout/LogIn";
+    cookieAuthenticationOptions.AccessDeniedPath = "/AccessDenied";
+    cookieAuthenticationOptions.ExpireTimeSpan = TimeSpan.FromSeconds(10);
+    cookieAuthenticationOptions.SlidingExpiration = false;
 });
 
 var authorizationBuilder = builder.Services.AddAuthorization(authorizationOptions => {
