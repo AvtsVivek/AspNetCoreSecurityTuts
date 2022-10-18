@@ -44,10 +44,13 @@ namespace WebAppWpRememberMe.Pages.LoginLogout
 
                 try
                 {
-
+                    var authProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = UserCreds.RememberMe
+                    };
                     // So now SignInAsync here is serializing the claimsPrincipal, encrypt it, and then 
                     // save that as a cookie and send that back in the response.
-                    await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal);
+                    await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal, authProperties);
                 }
                 catch (Exception ex)
                 {

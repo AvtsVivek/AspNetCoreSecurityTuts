@@ -11,5 +11,8 @@ namespace WebAppWpRememberMe.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; } = default!;
+
+        [Display(Name = "Remeber Me")]
+        public bool RememberMe { get; set; }
     }
 }

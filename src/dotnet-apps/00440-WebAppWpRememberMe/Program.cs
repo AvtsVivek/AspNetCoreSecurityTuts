@@ -14,7 +14,7 @@ authenticationBuilder.AddCookie(Constants.AuthTypeSchemeName, cookieAuthenticati
     cookieAuthenticationOptions.Cookie.Name = Constants.AuthTypeSchemeName;
     cookieAuthenticationOptions.LoginPath = "/LoginLogout/LogIn";
     cookieAuthenticationOptions.AccessDeniedPath = "/AccessDenied";
-    cookieAuthenticationOptions.ExpireTimeSpan = TimeSpan.FromSeconds(10);
+    cookieAuthenticationOptions.ExpireTimeSpan = TimeSpan.FromSeconds(120);
     cookieAuthenticationOptions.SlidingExpiration = false;
 });
 
