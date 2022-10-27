@@ -33,11 +33,17 @@ dotnet run --project ./GenerateJwtToken.csproj
 # Now come back to the exercise folder.
 cd ./../../exercises/200300-WebAppCookieAuth/
 
+dir
+
+dotnet add package System.IdentityModel.Tokens.Jwt 
+
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/00300-WebAppCookieAuth/WebAppCookieAuth.csproj
+dotnet build ./../../dotnet-apps/20300-GenerateJwtToken/GenerateJwtToken.csproj
 
-dotnet run --project ./../../dotnet-apps/00300-WebAppCookieAuth/WebAppCookieAuth.csproj
+dotnet run --project ./../../dotnet-apps/20300-GenerateJwtToken/GenerateJwtToken.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.

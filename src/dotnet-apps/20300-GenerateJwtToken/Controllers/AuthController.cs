@@ -21,7 +21,7 @@ public class AuthController : ControllerBase
     public IActionResult Authenticate([FromBody]Credential credential)
     {
         // Verify the credential
-        if (credential.UserName == "admin" && credential.Password == "password")
+        if (credential.UserName == "admin" && credential.Password == "123")
         {
             // Creating the security context
             var claims = new List<Claim> {
@@ -35,9 +35,11 @@ public class AuthController : ControllerBase
 
             var expiresAt = DateTime.UtcNow.AddMinutes(10);
 
+            var token = CreateToken(claims, expiresAt);
+
             return Ok(new
             {
-                access_token = CreateToken(claims, expiresAt),
+                access_token = token,
                 expires_at = expiresAt
             });
         }
@@ -58,7 +60,9 @@ public class AuthController : ControllerBase
                 new SymmetricSecurityKey(secretKey),
                 SecurityAlgorithms.HmacSha256Signature));
 
-        return new JwtSecurityTokenHandler().WriteToken(jwt);
+        var token = new JwtSecurityTokenHandler().WriteToken(jwt);
+        
+        return token;
     }
 }
 
