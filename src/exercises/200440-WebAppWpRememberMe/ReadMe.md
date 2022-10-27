@@ -37,7 +37,7 @@ await HttpContext.SignInAsync(Constants.AuthTypeSchemeName, claimsPrincipal, aut
 cookieAuthenticationOptions.ExpireTimeSpan = TimeSpan.FromSeconds(120);
 ```
 
-- Now, run, login. When logging in, first ensure the check box is unchecked. Then login. Now close the full browser(not just the **tab**). Then browse once again to the same url. Observe that login page is shown again. 
+- Now, run, login. When logging in, first ensure the check box is unchecked. Then login. Donot click logout link, but close the full browser(not just the **tab**). Then browse once again to the same url. Observe that login page is shown again. Inspite of the fact that you have not explicitly logged out by clicking the logout link, you are logged out just because you closed the browser.
 
 - Repeat now with check box is checked.
 
