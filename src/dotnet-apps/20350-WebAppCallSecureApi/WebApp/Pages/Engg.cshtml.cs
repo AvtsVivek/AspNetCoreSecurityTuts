@@ -7,7 +7,7 @@ using WebApp.Models;
 
 namespace WebApp.Pages
 {
-    [Authorize(Policy = "ConfirmedEnggOnly")]
+    // [Authorize(Policy = "ConfirmedEnggOnly")]
     public class EnggModel : PageModel
     {
         private readonly IHttpClientFactory _httpClientFactory;

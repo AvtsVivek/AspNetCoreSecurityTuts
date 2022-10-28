@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages
 {
-    [Authorize(Policy = "MustBelongToHrDept")]
+    // [Authorize(Policy = "MustBelongToHrDept")]
     public class HrModel : PageModel
     {
         public void OnGet()

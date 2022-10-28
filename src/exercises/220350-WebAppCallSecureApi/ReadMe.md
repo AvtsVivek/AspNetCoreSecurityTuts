@@ -1,51 +1,19 @@
-# Jwt Auth
+# Web App calls and gets data from a secured Web Api.
 
-- Add **Authorize** attribute to the WeatherForecast
-
-- Run the app and send a get request to 
-```
-https://localhost:7224/WeatherForecast 
-```
-- See the PostRequestToWeatherforeCastApi.http. You should get an exception.
-
-```
-System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
-```
-- Next Add the middle ware app.UseAuthentication(); just before Authorization middle ware
+- The web api is secured. The end point in this case is https://localhost:7038/WeatherForecast
+- The controller for this is ./../../dotnet-apps/20350-WebAppCallSecureApi/SecureApi/Controllers/WeatherForecastController.cs
+- Note **[Authorize]** attribute on the WeatherForecastController class.
+- Also note the AddAuthentication in the Programm.cs file.
 
 ```cs
-app.UseAuthentication();
-app.UseAuthorization();
+builder.Services.AddAuthentication(...)
+    .AddJwtBearer(...);
 ```
 
-- Now repeate the get request. You get the same exception. This is because the handler is not configured. The handler is the object which will read the token. The token is passed on with the request via the header. 
-
-- So the handler is configured as follows.
-
-```cs
-builder.Services.AddAuthentication(
-    // We are configuring the Auth Scheme in a much granular level here.
-    options =>
-    {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("SecretKey"))),
-            ValidateLifetime = true,
-            ValidateAudience = false,
-            ValidateIssuer = false,
-            ClockSkew = TimeSpan.Zero
-        };
-    });
-```
-
-- Note that the SecretKey is read from the appSettings file.
-- Now run the app, get the token by sending a post req to POST https://localhost:7224/Auth
-- Next call the weatherforecast by sending a GET req to https://localhost:7224/WeatherForecast 
-- The token must be set in the Authorization Header.
+- So a jwtoken is need for Authorization. This is obtained by calling the Auth end point.
+- So this is what the Engg page in the Web app does.
+- Also note that the cookied based authorization within the web app is commented out. The purpose of this example is to demonistrate 
+- the secured communication between web app and api. But not with-in the web app.
+- Here we go...
+- 
+- 
