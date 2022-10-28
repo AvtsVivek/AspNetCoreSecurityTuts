@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "AccessApiWithJwt": {
+    "AuthorizeWeatherForecastApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

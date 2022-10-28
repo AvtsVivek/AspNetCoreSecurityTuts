@@ -1,8 +1,7 @@
-using AccessApiWithJwt;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AccessApiWithJwt.Controllers;
+namespace AuthorizeWeatherForecastApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

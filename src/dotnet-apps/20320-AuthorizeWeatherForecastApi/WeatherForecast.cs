@@ -1,4 +1,4 @@
-namespace AccessApiWithJwt;
+namespace AuthorizeWeatherForecastApi;
 
 public class WeatherForecast
 {
