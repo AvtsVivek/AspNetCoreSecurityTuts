@@ -10,6 +10,8 @@
     ```
   - Also configure the session options
     ```cs
+    builder.Services.AddDistributedMemoryCache();
+
     builder.Services.AddSession(options =>
     {
         options.Cookie.Name = ".AdventureWorks.Session";

@@ -9,7 +9,7 @@ pwd
 
 dotnet build ./../../dotnet-apps/20600-WebAppCallApiReuseToken/WebAppCallApiReuseToken.sln
 
-dotnet run --project ./../../dotnet-apps/20600-WebAppCallApiReuseToken/WebAppCallApiReuseToken.sln
+dotnet run --project ./../../dotnet-apps/20600-WebAppCallApiReuseToken/SecureApi/SecureApi.csproj
 
 # Open a new terminal.
 
