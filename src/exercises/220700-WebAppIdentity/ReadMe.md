@@ -48,10 +48,7 @@
 
 ![Database](./images/20Database20.jpg)
 
-- Add a new model called AppUser as follows.
-  ```cs
-  public class AppUser : IdentityUser {  }
-  ```
+
 - Add Id Service. 
   ```cs
   builder.Services.AddIdentity<AppUser, IdentityRole>(
