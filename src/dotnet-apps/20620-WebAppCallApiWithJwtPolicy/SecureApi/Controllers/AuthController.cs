@@ -29,6 +29,7 @@ public class AuthController : ControllerBase
                 new Claim(ClaimTypes.Email, "admin@mywebsite.com"),
                 new Claim("Department", "HR"),
                 new Claim("Admin", "true"),
+                new Claim("EnggTeam", "true"),
                 new Claim("Manager", "true"),
                 new Claim("EmploymentDate", "2021-02-01")
             };

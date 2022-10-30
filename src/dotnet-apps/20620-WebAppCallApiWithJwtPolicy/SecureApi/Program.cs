@@ -27,6 +27,11 @@ builder.Services.AddAuthentication(
         };
     });
 
+builder.Services.AddAuthorization(options => {
+    options.AddPolicy("EnggTeamOnly",
+        policy => policy.RequireClaim("EnggTeam"));
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

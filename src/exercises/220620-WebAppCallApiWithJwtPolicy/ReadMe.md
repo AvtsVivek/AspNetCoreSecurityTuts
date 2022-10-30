@@ -1,6 +1,6 @@
 # Web App calls and gets data from a secured Web Api using JWT tokens. 
 
-- In this example, the JWT got will be stored in the session, then reused for the rest of the session. 
+- In this example, We will apply policy based authorization. 
 - So first configure session middle ware the service.
 ```cs
 app.UseSession();
