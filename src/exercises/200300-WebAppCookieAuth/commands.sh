@@ -7,7 +7,7 @@ pwd
 
 ################################################################################################
 
-# If you want to create the project from scratch.
+# If you want to create the project from scratch. We will not be using this approach. We will be using web pack approach.
 
 # First cd into the correct folder. Ensure first the folder is present.
 cd ./../../dotnet-apps/00300-WebAppCookieAuth/
@@ -34,6 +34,8 @@ dotnet run --project ./WebAppCookieAuth.csproj
 cd ./../../exercises/200300-WebAppCookieAuth/
 
 ################################################################################################
+
+# The web pack approach.
 
 cd ../../..
 
