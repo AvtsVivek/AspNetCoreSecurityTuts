@@ -45,3 +45,9 @@ dotnet run --project ./../../dotnet-apps/20700-WebAppIdentity/WebAppIdentity.csp
 
 ################################################################################################
 
+# https://learn.microsoft.com/en-us/ef/core/cli/dotnet#update-the-tools
+
+dotnet tool update --global dotnet-ef
+
+dotnet ef migrations add InitialMigration
+
