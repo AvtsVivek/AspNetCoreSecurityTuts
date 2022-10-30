@@ -1,5 +1,7 @@
 # Web App Aspdotnet core identity.
 
+- Adds a user register page.
+
 - Add nuget packages
   ```xml
   <ItemGroup>
