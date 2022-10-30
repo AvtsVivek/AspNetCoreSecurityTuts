@@ -78,5 +78,6 @@
   ```cs
   app.UseAuthentication();
   ```
-- 
+- Add a register page in the Account folder inside of the pages folder.
+
 

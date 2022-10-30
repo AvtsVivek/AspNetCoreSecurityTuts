@@ -13,19 +13,20 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
-builder.Services.AddIdentity<AppUser, IdentityRole>(
-        options =>
-        {
-            options.Password.RequiredLength = 8;
-            options.Password.RequireLowercase = true;
-            options.Password.RequireUppercase = true;
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+options =>
+{
 
-            options.Lockout.MaxFailedAccessAttempts = 5;
-            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+    options.Password.RequiredLength = 8;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
 
-            options.User.RequireUniqueEmail = true;
-        }
-    ).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+
+    options.User.RequireUniqueEmail = true;
+
+}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
