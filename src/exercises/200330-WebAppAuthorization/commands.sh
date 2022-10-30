@@ -7,6 +7,26 @@ pwd
 
 ################################################################################################
 
+# The web pack approach.
+
+cd ../../..
+
+cd src/dotnet-apps/00330-WebAppAuthorization
+
+Set-Location ClientApp
+
+npm install
+
+npm run wpbuild
+
+Set-Location ..
+
+dotnet build ./WebAppAuthorization.csproj
+
+dotnet run --project ./WebAppAuthorization.csproj
+
+################################################################################################
+
 dotnet build ./../../dotnet-apps/00330-WebAppAuthorization/WebAppAuthorization.csproj
 
 dotnet run --project ./../../dotnet-apps/00330-WebAppAuthorization/WebAppAuthorization.csproj
