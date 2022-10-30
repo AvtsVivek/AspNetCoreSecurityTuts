@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppCookieAuth", "WebAppCookieAuth.csproj", "{6CD12D4E-A81B-446E-99CE-AB78F89891AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppWithLoginPage", "WebAppWithLoginPage.csproj", "{6CD12D4E-A81B-446E-99CE-AB78F89891AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

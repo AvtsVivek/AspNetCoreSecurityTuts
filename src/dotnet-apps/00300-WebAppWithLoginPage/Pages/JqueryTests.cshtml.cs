@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace WebAppCookieAuth.Pages
+namespace WebAppWithLoginPage.Pages
 {
     public class JQueryTestsModel : PageModel
     {

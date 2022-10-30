@@ -6,9 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebAppCookieAuth.Models;
+using WebAppWithLoginPage.Models;
 
-namespace WebAppCookieAuth.Pages.Account
+namespace WebAppWithLoginPage.Pages.LoginLogout
 {
     public class LoginModel : PageModel
     {
@@ -16,13 +16,13 @@ namespace WebAppCookieAuth.Pages.Account
         public User UserCreds { get; set; } = default!;
 
         public void OnGet()
-        {            
+        {
 
         }
 
         public void OnPost()
         {
-            
+
             var password = UserCreds.Password;
             var userName = UserCreds.UserName;
             // If you are using visual studio, use the following break point to 

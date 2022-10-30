@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebAppCookieAuth.Models
+namespace WebAppWithLoginPage.Models
 {
     public class User
     {
