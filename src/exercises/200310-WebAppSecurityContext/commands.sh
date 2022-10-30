@@ -7,6 +7,26 @@ pwd
 
 ################################################################################################
 
+# The web pack approach.
+
+cd ../../..
+
+cd src/dotnet-apps/00310-WebAppCookieAuthContextPrep
+
+Set-Location ClientApp
+
+npm install
+
+npm run wpbuild
+
+Set-Location ..
+
+dotnet build ./WebAppCookieAuthContextPrep.csproj
+
+dotnet run --project ./WebAppCookieAuthContextPrep.csproj
+
+################################################################################################
+
 dotnet build ./../../dotnet-apps/00310-WebAppCookieAuthContextPrep/WebAppCookieAuthContextPrep.csproj
 
 dotnet run --project ./../../dotnet-apps/00310-WebAppCookieAuthContextPrep/WebAppCookieAuthContextPrep.csproj

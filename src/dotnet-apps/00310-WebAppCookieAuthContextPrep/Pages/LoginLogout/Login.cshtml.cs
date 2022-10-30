@@ -1,11 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
-using System.Security.Claims;
-using WebAppCookieAuth.Models;
+using WebAppCookieAuthContextPrep.Models;
 
-namespace WebAppCookieAuthContextPrep.Pages.Account
+namespace WebAppCookieAuthContextPrep.Pages.LoginLogout
 {
     public class LoginModel : PageModel
     {

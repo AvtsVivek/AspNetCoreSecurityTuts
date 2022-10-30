@@ -7,11 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
-//var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
-//authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
-//{
-//    options.Cookie.Name = Constants.AuthTypeSchemeName;
-//});
+// If you comment out the following Cookie configuration, then you will get exception.
+// Try commenting out first and then uncommenting it out and then running.
+var authBuilder = builder.Services.AddAuthentication(Constants.AuthTypeSchemeName);
+authBuilder.AddCookie(Constants.AuthTypeSchemeName, options =>
+{
+   options.Cookie.Name = Constants.AuthTypeSchemeName;
+});
 
 var app = builder.Build();
 

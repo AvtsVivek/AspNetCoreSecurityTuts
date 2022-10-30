@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace WebAppCookieAuth.Pages;
+namespace WebAppCookieAuthContextPrep.Pages;
 
 public class PrivacyModel : PageModel
 {
