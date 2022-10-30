@@ -31,7 +31,7 @@ dotnet run --project ./GenerateJwtToken.csproj
 # Remove-Item ./* -Recurse
 
 # Now come back to the exercise folder.
-cd ./../../exercises/200300-WebAppCookieAuth/
+cd ./../../exercises/220300-GenerateJwtToken/
 
 dir
 
