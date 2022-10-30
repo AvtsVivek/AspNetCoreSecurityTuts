@@ -35,6 +35,24 @@ cd ./../../exercises/200300-WebAppCookieAuth/
 
 ################################################################################################
 
+cd ../../..
+
+cd src/dotnet-apps/00300-WebAppCookieAuth
+
+Set-Location ClientApp
+
+npm install
+
+npm run wpbuild
+
+Set-Location ..
+
+dotnet build ./WebAppCookieAuth.csproj
+
+dotnet run --project ./WebAppCookieAuth.csproj
+
+################################################################################################
+
 dotnet build ./../../dotnet-apps/00300-WebAppCookieAuth/WebAppCookieAuth.csproj
 
 dotnet run --project ./../../dotnet-apps/00300-WebAppCookieAuth/WebAppCookieAuth.csproj
