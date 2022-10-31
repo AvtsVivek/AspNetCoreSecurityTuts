@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebAppIdentity.Model;
+using WebAppRegisterUser.Model;
 
-namespace WebAppIdentity.Pages.Account
+namespace WebAppRegisterUser.Pages.Account
 {
     public class RegisterModel : PageModel
     {
@@ -40,7 +40,7 @@ namespace WebAppIdentity.Pages.Account
                 UserName = RegisterViewModel.Email
             };
 
-            var result = await this.userManager.CreateAsync(user, RegisterViewModel.Password);
+            var result = await userManager.CreateAsync(user, RegisterViewModel.Password);
 
             if (result.Succeeded)
             {

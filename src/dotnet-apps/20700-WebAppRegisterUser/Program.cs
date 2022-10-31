@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using WebAppIdentity.Data;
-using WebAppIdentity.Model;
+using WebAppRegisterUser.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,12 +26,7 @@ options =>
     options.User.RequireUniqueEmail = true;
 
 }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.LoginPath = "/Identity/Account/Login";
-    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-});    
+ 
 
 var app = builder.Build();
 

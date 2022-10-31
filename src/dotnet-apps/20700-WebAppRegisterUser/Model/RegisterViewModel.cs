@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebAppIdentity.Model
+namespace WebAppRegisterUser.Model
 {
     public class RegisterViewModel
     {
@@ -9,7 +9,7 @@ namespace WebAppIdentity.Model
         public string Email { get; set; } = default!;
 
         [Required]
-        [DataType(dataType:DataType.Password)]
+        [DataType(dataType: DataType.Password)]
         public string Password { get; set; } = default!;
     }
 

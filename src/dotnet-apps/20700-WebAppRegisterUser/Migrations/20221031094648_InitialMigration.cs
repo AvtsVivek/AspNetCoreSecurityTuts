@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WebAppIdentity.Migrations
+namespace WebAppRegisterUser.Migrations
 {
     public partial class InitialMigration : Migration
     {

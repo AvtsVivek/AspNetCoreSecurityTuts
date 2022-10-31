@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace WebAppIdentity.Pages
+namespace WebAppRegisterUser.Pages
 {
     public class JQueryTestsModel : PageModel
     {

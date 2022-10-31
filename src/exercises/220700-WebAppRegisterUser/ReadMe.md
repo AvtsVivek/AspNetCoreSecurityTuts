@@ -1,8 +1,10 @@
 # Web App Aspdotnet core identity.
 
-- Adds a user register page.
+- Adds a user register page to a blank web app.
+  - The starting template to the web app is [this dotnet razor page web pack solution](https://github.com/AvtsVivek/webpacktuts/tree/main/code/600500-aspnetcore-webapp-webpack)
+  - 
 
-- Add nuget packages
+- Add necessary nuget packages
   ```xml
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.10" />
@@ -23,7 +25,7 @@
       }
   }
   ```  
-- Configure the services to let the container know about the db context.
+- Configure the services to let the di container know about the db context.
 
   ```cs
   builder.Services.AddDbContext<AppDbContext>(options =>
@@ -51,9 +53,9 @@
 ![Database](./images/20Database20.jpg)
 
 
-- Add Id Service. 
+- Add Id Service to the container.
   ```cs
-  builder.Services.AddIdentity<AppUser, IdentityRole>(
+  builder.Services.AddIdentity<IdentityUser, IdentityRole>(
         options =>
         {
             options.Password.RequiredLength = 8;
@@ -66,17 +68,10 @@
             options.User.RequireUniqueEmail = true;
         }
     ).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
-  builder.Services.ConfigureApplicationCookie(options =>
-  {
-      options.LoginPath = "/Identity/Account/Login";
-      options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-  });  
   ```
 - Add the middleware
   ```cs
   app.UseAuthentication();
   ```
 - Add a register page in the Account folder inside of the pages folder.
-
 
