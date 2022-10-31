@@ -74,4 +74,8 @@
   app.UseAuthentication();
   ```
 - Add a register page in the Account folder inside of the pages folder.
+- Essentially calling the CreateAsync to create a user.
+```cs
+var result = await userManager.CreateAsync(user, RegisterViewModel.Password);
+```
 
