@@ -54,3 +54,5 @@ dotnet ef migrations add InitialMigration
 dotnet ef database update InitialMigration
 
 dotnet run --project ./WebAppIdLogin.csproj
+
+
