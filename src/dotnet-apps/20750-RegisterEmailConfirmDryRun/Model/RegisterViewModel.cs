@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RegisterEmailConfig.Model
+namespace RegisterEmailConfirmDryRun.Model
 {
     public class RegisterViewModel
     {

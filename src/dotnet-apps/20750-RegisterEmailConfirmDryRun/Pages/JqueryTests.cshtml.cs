@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RegisterEmailConfig.Pages
+namespace RegisterEmailConfirmDryRun.Pages
 {
     public class JQueryTestsModel : PageModel
     {

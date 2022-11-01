@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using RegisterEmailConfig.Data;
+using RegisterEmailConfirmDryRun.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

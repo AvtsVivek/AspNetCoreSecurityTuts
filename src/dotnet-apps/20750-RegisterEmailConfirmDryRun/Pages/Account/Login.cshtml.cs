@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using RegisterEmailConfig.Model;
+using RegisterEmailConfirmDryRun.Model;
 
-namespace RegisterEmailConfig.Pages.Account
+namespace RegisterEmailConfirmDryRun.Pages.Account
 {
     public class LoginModel : PageModel
     {

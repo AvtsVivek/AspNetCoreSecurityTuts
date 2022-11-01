@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using RegisterEmailConfig.Model;
+using RegisterEmailConfirmDryRun.Model;
 
-namespace RegisterEmailConfig.Pages.Account
+namespace RegisterEmailConfirmDryRun.Pages.Account
 {
     public class RegisterModel : PageModel
     {
@@ -49,7 +49,7 @@ namespace RegisterEmailConfig.Pages.Account
                 var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 return Redirect(Url.PageLink(pageName: "/Account/ConfirmEmail",
                     values: new { userId = user.Id, token = confirmationToken })!);
-                
+
                 //return RedirectToPage("/Account/Login");
             }
             else

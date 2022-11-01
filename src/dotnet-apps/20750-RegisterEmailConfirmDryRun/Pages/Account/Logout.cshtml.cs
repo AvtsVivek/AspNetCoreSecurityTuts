@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RegisterEmailConfig.Pages.Account
+namespace RegisterEmailConfirmDryRun.Pages.Account
 {
     public class LogoutModel : PageModel
     {

@@ -6,14 +6,14 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RegisterEmailConfig.Pages.Account
+namespace RegisterEmailConfirmDryRun.Pages.Account
 {
     public class ConfirmEmailModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
 
         [BindProperty]
-        public string Message { get; set; }
+        public string Message { get; set; } = default!;
 
         public ConfirmEmailModel(UserManager<IdentityUser> userManager)
         {
@@ -25,10 +25,10 @@ namespace RegisterEmailConfig.Pages.Account
             var user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                var result = await _userManager.ConfirmEmailAsync(user, token);
+                    var result = await _userManager.ConfirmEmailAsync(user, token);
                 if (result.Succeeded)
                 {
-                    Message = "Email address is successfully confirm, now you can try to login.";
+                    Message = "Email address is successfully confirmed, now you can try to login.";
                     return Page();
                 }
             }

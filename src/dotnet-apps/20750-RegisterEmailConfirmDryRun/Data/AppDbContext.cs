@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace RegisterEmailConfig.Data
+namespace RegisterEmailConfirmDryRun.Data
 {
     public class AppDbContext : IdentityDbContext
     {
