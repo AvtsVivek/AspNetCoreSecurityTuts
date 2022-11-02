@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using RegisterSendEmail.Model;
+using RegisterUserEmailService.Model;
 
-namespace RegisterSendEmail.Pages.Account
+namespace RegisterUserEmailService.Pages.Account
 {
     public class RegisterSuccessModel : PageModel
     {

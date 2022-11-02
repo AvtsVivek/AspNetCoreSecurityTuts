@@ -26,35 +26,5 @@ namespace RegisterEmailConfirmDryRun.Pages.Account
         {
 
         }
-
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (!ModelState.IsValid) return Page();
-
-            // Validating Email address (Optional)
-
-            // Create the user 
-            var user = new IdentityUser
-            {
-                Email = RegisterViewModel.Email,
-                UserName = RegisterViewModel.Email
-            };
-
-            var result = await userManager.CreateAsync(user, RegisterViewModel.Password);
-
-            if (result.Succeeded)
-            {
-                return RedirectToPage("/Account/Login");
-            }
-            else
-            {
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("Register", error.Description);
-                }
-
-                return Page();
-            }
-        }
     }
 }
