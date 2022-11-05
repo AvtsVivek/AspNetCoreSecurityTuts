@@ -9,16 +9,19 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RegisterUserEmailService.Model;
+using RegisterUserEmailService.Services;
 
 namespace RegisterUserEmailService.Pages.Account
 {
     public class RegisterModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly IEmailService _emailService;
 
-        public RegisterModel(UserManager<IdentityUser> userManager)
+        public RegisterModel(UserManager<IdentityUser> userManager, IEmailService emailService)
         {
             _userManager = userManager;
+            _emailService = emailService;
         }
 
         [BindProperty]
@@ -36,6 +39,7 @@ namespace RegisterUserEmailService.Pages.Account
             // Validating Email address (Optional)
 
             // Create the user 
+
             var user = new IdentityUser
             {
                 Email = RegisterViewModel.Email,
@@ -46,22 +50,7 @@ namespace RegisterUserEmailService.Pages.Account
 
             if (result.Succeeded)
             {
-                var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                var confirmationLink = Url.PageLink(pageName: "/Account/ConfirmEmail",
-                    values: new { userId = user.Id, token = confirmationToken });
-
-                var messagee = new MailMessage("vivek@gmail.com", user.Email,
-                    "Please confirm your email",
-                    $"Please click on this link to confirm your email address: {confirmationLink}");
-
-                using (var emailClient = new SmtpClient("localhost", 1025))
-                {
-                    emailClient.Credentials = new NetworkCredential(
-                        "vivek@gmail.com",
-                        "VqaRACgdU3Xp5cWB");
-
-                    await emailClient.SendMailAsync(messagee);
-                }
+                await _emailService.SendConformationEmail(user, Url);
 
                 return RedirectToPage("/Account/RegisterSuccess");
             }
@@ -75,5 +64,25 @@ namespace RegisterUserEmailService.Pages.Account
                 return Page();
             }
         }
+
+        //private async Task SendConformationEmail(IdentityUser user, IUrlHelper urlHelper)
+        //{
+        //    var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        //    var confirmationLink = urlHelper.PageLink(pageName: "/Account/ConfirmEmail",
+        //        values: new { userId = user.Id, token = confirmationToken });
+
+        //    var messagee = new MailMessage("vivek@gmail.com", user.Email,
+        //        "Please confirm your email",
+        //        $"Please click on this link to confirm your email address: {confirmationLink}");
+
+        //    using (var emailClient = new SmtpClient("localhost", 1025))
+        //    {
+        //        emailClient.Credentials = new NetworkCredential(
+        //            "vivek@gmail.com",
+        //            "VqaRACgdU3Xp5cWB");
+
+        //        await emailClient.SendMailAsync(messagee);
+        //    }
+        //}
     }
 }
