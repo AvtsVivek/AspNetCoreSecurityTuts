@@ -40,4 +40,4 @@ start http://localhost:8025
 - Run the app, click register link to register a new user.
 - Now check the mail in the mail box(browse to http://localhost:8025)
 - Check the email you recieved, then click the link in it.
-- 
+- Here we go...
