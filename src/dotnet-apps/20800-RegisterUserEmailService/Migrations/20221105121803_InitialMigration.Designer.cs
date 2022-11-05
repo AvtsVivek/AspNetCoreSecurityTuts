@@ -12,7 +12,7 @@ using RegisterUserEmailService.Data;
 namespace RegisterUserEmailService.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221102033651_InitialMigration")]
+    [Migration("20221105121803_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

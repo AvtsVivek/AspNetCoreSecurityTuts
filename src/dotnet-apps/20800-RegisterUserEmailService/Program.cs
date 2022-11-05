@@ -13,7 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
-builder.Services.AddSingleton<IEmailService, EmailService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(
 options =>
