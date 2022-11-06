@@ -5,6 +5,7 @@ cd src/exercises/220800-RegisterUserEmailService
 
 pwd
 
+# Ensure docker is up and running, fire up docker desktop
 docker-compose up -d mailhog
 
 # If you want to tear that donw, use the following
