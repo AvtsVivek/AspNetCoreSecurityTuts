@@ -32,16 +32,6 @@ options =>
 
 }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
-// builder.Services.ConfigureApplicationCookie(options =>
-// {
-//     options.LoginPath = "/Account/Login";
-//     options.AccessDeniedPath = "/Account/AccessDenied";
-// });
-
-//builder.Services.ConfigureApplicationCookie(options =>
-//{
-//    // options.ExpireTimeSpan = TimeSpan.FromSeconds(120);
-//});
 
 var app = builder.Build();
 
