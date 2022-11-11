@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RegisterUserCollectMoreInfo.Data.Account;
 
 namespace RegisterUserCollectMoreInfo.Pages.Account
 {
     public class LogoutModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly SignInManager<Student> signInManager;
 
-        public LogoutModel(SignInManager<IdentityUser> signInManager)
+        public LogoutModel(SignInManager<Student> signInManager)
         {
             this.signInManager = signInManager;
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using RegisterUserCollectMoreInfo.Data.Account;
 using System.Net;
 using System.Net.Mail;
 
@@ -7,18 +8,18 @@ namespace RegisterUserCollectMoreInfo.Services
 {
     public interface IEmailService
     {
-        Task SendConformationEmail(IdentityUser user, IUrlHelper urlHelper);
+        Task SendConformationEmail(Student user, IUrlHelper urlHelper);
     }
     public class EmailService : IEmailService
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<Student> _userManager;
 
-        public EmailService(UserManager<IdentityUser> userManager)
+        public EmailService(UserManager<Student> userManager)
         {
             _userManager = userManager;
         }
 
-        public async Task SendConformationEmail(IdentityUser user, IUrlHelper urlHelper)
+        public async Task SendConformationEmail(Student user, IUrlHelper urlHelper)
         {
             var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink = urlHelper.PageLink(pageName: "/Account/ConfirmEmail",

@@ -24,7 +24,7 @@ dotnet run --project ./../../dotnet-apps/20825-RegisterUserCollectMoreInfo/Regis
 
 cd ../../..
 
-cd src/dotnet-apps/20800-RegisterUserEmailService/
+cd src/dotnet-apps/20825-RegisterUserCollectMoreInfo/
 
 Set-Location ClientApp
 
@@ -36,9 +36,9 @@ Set-Location ..
 
 pwd
 
-dotnet build ./RegisterUserEmailService.sln
+dotnet build ./RegisterUserCollectMoreInfo.sln
 
-dotnet run --project ./RegisterUserEmailService.csproj
+dotnet run --project ./RegisterUserCollectMoreInfo.csproj
 
 ################################################################################################
 
@@ -50,13 +50,15 @@ dotnet run --project ./RegisterUserEmailService.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/20800-RegisterUserEmailService/
+cd src/dotnet-apps/20825-RegisterUserCollectMoreInfo/
 
 dotnet tool update --global dotnet-ef
 
-dotnet ef migrations add InitialMigration
+dotnet ef migrations add AddMoreInfo
 
-dotnet ef database update InitialMigration
+dotnet ef migrations list
 
-dotnet run --project ./RegisterUserEmailService.csproj
+dotnet ef database update AddMoreInfo
+
+dotnet run --project ./RegisterUserCollectMoreInfo.csproj
 

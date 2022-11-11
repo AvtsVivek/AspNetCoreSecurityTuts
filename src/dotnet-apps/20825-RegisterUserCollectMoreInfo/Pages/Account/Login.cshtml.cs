@@ -8,15 +8,16 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RegisterUserCollectMoreInfo.Data.Account;
 using RegisterUserCollectMoreInfo.Model;
 
 namespace RegisterUserCollectMoreInfo.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<Student> _signInManager;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager)
+        public LoginModel(SignInManager<Student> signInManager)
         {
             _signInManager = signInManager;
         }

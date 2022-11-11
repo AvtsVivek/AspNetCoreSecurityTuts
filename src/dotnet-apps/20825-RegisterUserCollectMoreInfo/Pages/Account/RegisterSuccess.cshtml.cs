@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RegisterUserCollectMoreInfo.Data.Account;
 using RegisterUserCollectMoreInfo.Model;
 
 namespace RegisterUserCollectMoreInfo.Pages.Account
 {
     public class RegisterSuccessModel : PageModel
     {
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<Student> userManager;
 
-        public RegisterSuccessModel(UserManager<IdentityUser> userManager)
+        public RegisterSuccessModel(UserManager<Student> userManager)
         {
             this.userManager = userManager;
         }

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RegisterUserCollectMoreInfo.Data;
+using RegisterUserCollectMoreInfo.Data.Account;
 using RegisterUserCollectMoreInfo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IEmailService, EmailService>();
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+builder.Services.AddIdentity<Student, IdentityRole>(
 options =>
 {
 

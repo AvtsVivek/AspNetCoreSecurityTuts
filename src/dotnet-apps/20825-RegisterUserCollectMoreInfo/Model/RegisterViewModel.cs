@@ -11,6 +11,13 @@ namespace RegisterUserCollectMoreInfo.Model
         [Required]
         [DataType(dataType: DataType.Password)]
         public string Password { get; set; } = default!;
+
+        [Required]
+        public string RollNumber { get; set; } = default!;
+
+        [Required]
+        public int YearEnrolled { get; set; }
+
     }
 
     public class CredentialViewModel

@@ -10,15 +10,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RegisterUserCollectMoreInfo.Model;
 using RegisterUserCollectMoreInfo.Services;
+using RegisterUserCollectMoreInfo.Data.Account;
 
 namespace RegisterUserCollectMoreInfo.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<Student> _userManager;
         private readonly IEmailService _emailService;
 
-        public RegisterModel(UserManager<IdentityUser> userManager, IEmailService emailService)
+        public RegisterModel(UserManager<Student> userManager, IEmailService emailService)
         {
             _userManager = userManager;
             _emailService = emailService;
@@ -36,14 +37,12 @@ namespace RegisterUserCollectMoreInfo.Pages.Account
         {
             if (!ModelState.IsValid) return Page();
 
-            // Validating Email address (Optional)
-
-            // Create the user 
-
-            var user = new IdentityUser
+            var user = new Student
             {
                 Email = RegisterViewModel.Email,
-                UserName = RegisterViewModel.Email
+                UserName = RegisterViewModel.Email,
+                RollNumber = RegisterViewModel.RollNumber,
+                YearEnrolled = RegisterViewModel.YearEnrolled
             };
 
             var result = await _userManager.CreateAsync(user, RegisterViewModel.Password);

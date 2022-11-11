@@ -5,17 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RegisterUserCollectMoreInfo.Data.Account;
 
 namespace RegisterUserCollectMoreInfo.Pages.Account
 {
     public class ConfirmEmailModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<Student> _userManager;
 
         [BindProperty]
         public string Message { get; set; } = default!;
 
-        public ConfirmEmailModel(UserManager<IdentityUser> userManager)
+        public ConfirmEmailModel(UserManager<Student> userManager)
         {
             _userManager = userManager;
         }
