@@ -1,7 +1,9 @@
 
-cd ./src/dotnet-apps/00115-AbsoluteBasicWeb
+cd ../../..
 
-dotnet new web --name AbsoluteBasicWeb --framework net6.0
+cd ./src/dotnet-apps/200180-AbsoluteBasicWeb
+
+dotnet new web --name AbsoluteBasicWeb --framework net7.0
 
 cd ./AbsoluteBasicWeb
 
