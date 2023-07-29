@@ -1,26 +1,30 @@
 
 cd ../../..
 
-cd src/tasks/220770-RegisterSendEmail
+cd src/tasks/205840-RegisterUserAddClaims
 
 pwd
 
+# Ensure docker is up and running, fire up docker desktop
 docker-compose up -d mailhog
+
+# If you want to tear that donw, use the following
+docker-compose down
 
 # Now browse to localhost:8025
 start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../apps/220770-RegisterSendEmail/RegisterSendEmail.sln
+dotnet build ./../../apps/205840-RegisterUserAddClaims/RegisterUserAddClaims.sln
 
-dotnet run --project ./../../apps/220770-RegisterSendEmail/RegisterSendEmail.csproj
+dotnet run --project ./../../apps/205840-RegisterUserAddClaims/RegisterUserAddClaims.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/apps/220770-RegisterSendEmail/
+cd src/apps/205840-RegisterUserAddClaims/
 
 Set-Location ClientApp
 
@@ -32,9 +36,9 @@ Set-Location ..
 
 pwd
 
-dotnet build ./RegisterSendEmail.sln
+dotnet build ./RegisterUserAddClaims.sln
 
-dotnet run --project ./RegisterSendEmail.csproj
+dotnet run --project ./RegisterUserAddClaims.csproj
 
 ################################################################################################
 
@@ -46,13 +50,15 @@ dotnet run --project ./RegisterSendEmail.csproj
 
 cd ../../..
 
-cd src/apps/220770-RegisterSendEmail/
+cd src/apps/205840-RegisterUserAddClaims/
 
 dotnet tool update --global dotnet-ef
 
-dotnet ef migrations add InitialMigration
+dotnet ef migrations add AddMoreInfo
 
-dotnet ef database update InitialMigration
+dotnet ef migrations list
 
-dotnet run --project ./RegisterSendEmail.csproj
+dotnet ef database update AddMoreInfo
+
+dotnet run --project ./RegisterUserAddClaims.csproj
 

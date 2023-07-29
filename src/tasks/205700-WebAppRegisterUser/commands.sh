@@ -1,21 +1,21 @@
 
 cd ../../..
 
-cd src/tasks/220700-WebAppRegisterUser
+cd src/tasks/205700-WebAppRegisterUser
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../apps/220700-WebAppRegisterUser/WebAppRegisterUser.sln
+dotnet build ./../../apps/205700-WebAppRegisterUser/WebAppRegisterUser.sln
 
-dotnet run --project ./../../apps/220700-WebAppRegisterUser/WebAppRegisterUser.csproj
+dotnet run --project ./../../apps/205700-WebAppRegisterUser/WebAppRegisterUser.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/apps/220700-WebAppRegisterUser/
+cd src/apps/205700-WebAppRegisterUser/
 
 Set-Location ClientApp
 
@@ -33,9 +33,9 @@ dotnet run --project ./WebAppRegisterUser.csproj
 
 # Open a new terminal.
 
-cd src/tasks/220700-WebAppRegisterUser
+cd src/tasks/205700-WebAppRegisterUser
 
-dotnet run --project ./../../apps/220700-WebAppRegisterUser/WebAppRegisterUser.csproj
+dotnet run --project ./../../apps/205700-WebAppRegisterUser/WebAppRegisterUser.csproj
 
 ################################################################################################
 
@@ -45,7 +45,7 @@ dotnet run --project ./../../apps/220700-WebAppRegisterUser/WebAppRegisterUser.c
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd src/apps/220700-WebAppRegisterUser/
+cd src/apps/205700-WebAppRegisterUser/
 
 dotnet tool update --global dotnet-ef
 

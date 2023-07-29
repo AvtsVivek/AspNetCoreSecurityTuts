@@ -1,21 +1,21 @@
 
 cd ../../..
 
-cd src/tasks/220720-WebAppIdLogin
+cd src/tasks/205750-RegisterEmailConfirmDryRun
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.sln
+dotnet build ./../../apps/205750-RegisterEmailConfirmDryRun/RegisterEmailConfirmDryRun.sln
 
-dotnet run --project ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
+dotnet run --project ./../../apps/205750-RegisterEmailConfirmDryRun/RegisterEmailConfirmDryRun.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/apps/220720-WebAppIdLogin/
+cd src/apps/205750-RegisterEmailConfirmDryRun/
 
 Set-Location ClientApp
 
@@ -27,15 +27,9 @@ Set-Location ..
 
 pwd
 
-dotnet build ./WebAppIdLogin.sln
+dotnet build ./RegisterEmailConfirmDryRun.sln
 
-dotnet run --project ./WebAppIdLogin.csproj
-
-# Open a new terminal.
-
-cd src/tasks/220720-WebAppIdLogin
-
-dotnet run --project ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
+dotnet run --project ./RegisterEmailConfirmDryRun.csproj
 
 ################################################################################################
 
@@ -45,7 +39,7 @@ dotnet run --project ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd src/apps/220720-WebAppIdLogin/
+cd src/apps/205750-RegisterEmailConfirmDryRun/
 
 dotnet tool update --global dotnet-ef
 
@@ -53,6 +47,5 @@ dotnet ef migrations add InitialMigration
 
 dotnet ef database update InitialMigration
 
-dotnet run --project ./WebAppIdLogin.csproj
-
+dotnet run --project ./RegisterEmailConfirmDryRun.csproj
 

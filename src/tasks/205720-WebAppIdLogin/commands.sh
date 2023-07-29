@@ -1,30 +1,21 @@
 
 cd ../../..
 
-cd src/tasks/220800-RegisterUserEmailService
+cd src/tasks/205720-WebAppIdLogin
 
 pwd
 
-# Ensure docker is up and running, fire up docker desktop
-docker-compose up -d mailhog
-
-# If you want to tear that donw, use the following
-docker-compose down
-
-# Now browse to localhost:8025
-start http://localhost:8025
-
 ################################################################################################
 
-dotnet build ./../../apps/220800-RegisterUserEmailService/RegisterUserEmailService.sln
+dotnet build ./../../apps/205720-WebAppIdLogin/WebAppIdLogin.sln
 
-dotnet run --project ./../../apps/220800-RegisterUserEmailService/RegisterUserEmailService.csproj
+dotnet run --project ./../../apps/205720-WebAppIdLogin/WebAppIdLogin.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/apps/220800-RegisterUserEmailService/
+cd src/apps/205720-WebAppIdLogin/
 
 Set-Location ClientApp
 
@@ -36,9 +27,15 @@ Set-Location ..
 
 pwd
 
-dotnet build ./RegisterUserEmailService.sln
+dotnet build ./WebAppIdLogin.sln
 
-dotnet run --project ./RegisterUserEmailService.csproj
+dotnet run --project ./WebAppIdLogin.csproj
+
+# Open a new terminal.
+
+cd src/tasks/205720-WebAppIdLogin
+
+dotnet run --project ./../../apps/205720-WebAppIdLogin/WebAppIdLogin.csproj
 
 ################################################################################################
 
@@ -48,9 +45,7 @@ dotnet run --project ./RegisterUserEmailService.csproj
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd ../../..
-
-cd src/apps/220800-RegisterUserEmailService/
+cd src/apps/205720-WebAppIdLogin/
 
 dotnet tool update --global dotnet-ef
 
@@ -58,5 +53,6 @@ dotnet ef migrations add InitialMigration
 
 dotnet ef database update InitialMigration
 
-dotnet run --project ./RegisterUserEmailService.csproj
+dotnet run --project ./WebAppIdLogin.csproj
+
 

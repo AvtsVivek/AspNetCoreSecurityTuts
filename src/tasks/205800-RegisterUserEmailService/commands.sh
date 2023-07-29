@@ -1,7 +1,7 @@
 
 cd ../../..
 
-cd src/tasks/220825-RegisterUserCollectMoreInfo
+cd src/tasks/205800-RegisterUserEmailService
 
 pwd
 
@@ -16,15 +16,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.sln
+dotnet build ./../../apps/205800-RegisterUserEmailService/RegisterUserEmailService.sln
 
-dotnet run --project ./../../apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.csproj
+dotnet run --project ./../../apps/205800-RegisterUserEmailService/RegisterUserEmailService.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/apps/220825-RegisterUserCollectMoreInfo/
+cd src/apps/205800-RegisterUserEmailService/
 
 Set-Location ClientApp
 
@@ -36,9 +36,9 @@ Set-Location ..
 
 pwd
 
-dotnet build ./RegisterUserCollectMoreInfo.sln
+dotnet build ./RegisterUserEmailService.sln
 
-dotnet run --project ./RegisterUserCollectMoreInfo.csproj
+dotnet run --project ./RegisterUserEmailService.csproj
 
 ################################################################################################
 
@@ -50,15 +50,13 @@ dotnet run --project ./RegisterUserCollectMoreInfo.csproj
 
 cd ../../..
 
-cd src/apps/220825-RegisterUserCollectMoreInfo/
+cd src/apps/205800-RegisterUserEmailService/
 
 dotnet tool update --global dotnet-ef
 
-dotnet ef migrations add AddMoreInfo
+dotnet ef migrations add InitialMigration
 
-dotnet ef migrations list
+dotnet ef database update InitialMigration
 
-dotnet ef database update AddMoreInfo
-
-dotnet run --project ./RegisterUserCollectMoreInfo.csproj
+dotnet run --project ./RegisterUserEmailService.csproj
 

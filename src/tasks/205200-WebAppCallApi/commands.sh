@@ -1,21 +1,21 @@
 
 cd ../../..
 
-cd src/tasks/220200-WebAppCallApi
+cd src/tasks/205200-WebAppCallApi
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../apps/220200-WebAppCallApi/WebAppCallApi.sln
+dotnet build ./../../apps/205200-WebAppCallApi/WebAppCallApi.sln
 
-dotnet run --project ./../../apps/220200-WebAppCallApi/WebApi/WebApi.csproj
+dotnet run --project ./../../apps/205200-WebAppCallApi/WebApi/WebApi.csproj
 
 # Open a new terminal.
 
-cd src/tasks/220200-WebAppCallApi
+cd src/tasks/205200-WebAppCallApi
 
-dotnet run --project ./../../apps/220200-WebAppCallApi/WebApp/WebApp.csproj
+dotnet run --project ./../../apps/205200-WebAppCallApi/WebApp/WebApp.csproj
 
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
@@ -25,7 +25,7 @@ dotnet run --project ./../../apps/220200-WebAppCallApi/WebApp/WebApp.csproj
 
 cd ../../..
 
-cd src/apps/220200-WebAppCallApi
+cd src/apps/205200-WebAppCallApi
 
 Set-Location WebApp
 
@@ -37,15 +37,15 @@ npm run wpbuild
 
 Set-Location ..
 
-dotnet build ./../../apps/220200-WebAppCallApi/WebAppCallApi.sln
+dotnet build ./../../apps/205200-WebAppCallApi/WebAppCallApi.sln
 
-dotnet run --project ./../../apps/220200-WebAppCallApi/WebApi/WebApi.csproj
+dotnet run --project ./../../apps/205200-WebAppCallApi/WebApi/WebApi.csproj
 
 # Open a new terminal.
 
-cd src/tasks/220200-WebAppCallApi
+cd src/tasks/205200-WebAppCallApi
 
-dotnet run --project ./../../apps/220200-WebAppCallApi/WebApp/WebApp.csproj
+dotnet run --project ./../../apps/205200-WebAppCallApi/WebApp/WebApp.csproj
 
 ################################################################################################
 

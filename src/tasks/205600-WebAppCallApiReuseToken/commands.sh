@@ -1,27 +1,27 @@
 
 cd ../../..
 
-cd src/tasks/220600-WebAppCallApiReuseToken
+cd src/tasks/205600-WebAppCallApiReuseToken
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../apps/220600-WebAppCallApiReuseToken/WebAppCallApiReuseToken.sln
+dotnet build ./../../apps/205600-WebAppCallApiReuseToken/WebAppCallApiReuseToken.sln
 
-dotnet run --project ./../../apps/220600-WebAppCallApiReuseToken/SecureApi/SecureApi.csproj
+dotnet run --project ./../../apps/205600-WebAppCallApiReuseToken/SecureApi/SecureApi.csproj
 
 # Open a new terminal.
 
-cd src/tasks/220600-WebAppCallApiReuseToken
+cd src/tasks/205600-WebAppCallApiReuseToken
 
-dotnet run --project ./../../apps/220600-WebAppCallApiReuseToken/WebApp/WebApp.csproj
+dotnet run --project ./../../apps/205600-WebAppCallApiReuseToken/WebApp/WebApp.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/apps/220600-WebAppCallApiReuseToken/
+cd src/apps/205600-WebAppCallApiReuseToken/
 
 Set-Location WebApp
 
@@ -41,9 +41,9 @@ dotnet run --project ./../SecureApi/SecureApi.csproj
 
 # Open a new terminal.
 
-cd src/tasks/220600-WebAppCallApiReuseToken
+cd src/tasks/205600-WebAppCallApiReuseToken
 
-dotnet run --project ./../../apps/220600-WebAppCallApiReuseToken/WebApp/WebApp.csproj
+dotnet run --project ./../../apps/205600-WebAppCallApiReuseToken/WebApp/WebApp.csproj
 
 ################################################################################################
 
