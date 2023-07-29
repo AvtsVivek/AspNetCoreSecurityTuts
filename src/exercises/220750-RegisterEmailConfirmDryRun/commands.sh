@@ -1,21 +1,21 @@
 
 cd ../../..
 
-cd src/exercises/220750-RegisterEmailConfirmDryRun
+cd src/tasks/220750-RegisterEmailConfirmDryRun
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/220750-RegisterEmailConfirmDryRun/RegisterEmailConfirmDryRun.sln
+dotnet build ./../../apps/220750-RegisterEmailConfirmDryRun/RegisterEmailConfirmDryRun.sln
 
-dotnet run --project ./../../dotnet-apps/220750-RegisterEmailConfirmDryRun/RegisterEmailConfirmDryRun.csproj
+dotnet run --project ./../../apps/220750-RegisterEmailConfirmDryRun/RegisterEmailConfirmDryRun.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/220750-RegisterEmailConfirmDryRun/
+cd src/apps/220750-RegisterEmailConfirmDryRun/
 
 Set-Location ClientApp
 
@@ -39,7 +39,7 @@ dotnet run --project ./RegisterEmailConfirmDryRun.csproj
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd src/dotnet-apps/220750-RegisterEmailConfirmDryRun/
+cd src/apps/220750-RegisterEmailConfirmDryRun/
 
 dotnet tool update --global dotnet-ef
 

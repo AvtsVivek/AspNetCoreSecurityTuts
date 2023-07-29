@@ -1,14 +1,14 @@
 
 cd ../../..
 
-cd src/exercises/200220-EmptyWebAppBreakPoint
+cd src/tasks/200220-EmptyWebAppBreakPoint
 
 pwd
 
-start ./../../dotnet-apps/200220-EmptyWebAppBreakPoint/EmptyWebAppBreakPoint.sln
+start ./../../apps/200220-EmptyWebAppBreakPoint/EmptyWebAppBreakPoint.sln
 
-dotnet build ./../../dotnet-apps/200220-EmptyWebAppBreakPoint/EmptyWebAppBreakPoint.csproj
+dotnet build ./../../apps/200220-EmptyWebAppBreakPoint/EmptyWebAppBreakPoint.csproj
 
-dotnet run --project ./../../dotnet-apps/200220-EmptyWebAppBreakPoint/EmptyWebAppBreakPoint.csproj
+dotnet run --project ./../../apps/200220-EmptyWebAppBreakPoint/EmptyWebAppBreakPoint.csproj
 
 

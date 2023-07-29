@@ -1,7 +1,7 @@
 
 cd ../../..
 
-cd src/exercises/220825-RegisterUserCollectMoreInfo
+cd src/tasks/220825-RegisterUserCollectMoreInfo
 
 pwd
 
@@ -16,15 +16,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.sln
+dotnet build ./../../apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.sln
 
-dotnet run --project ./../../dotnet-apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.csproj
+dotnet run --project ./../../apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/220825-RegisterUserCollectMoreInfo/
+cd src/apps/220825-RegisterUserCollectMoreInfo/
 
 Set-Location ClientApp
 
@@ -50,7 +50,7 @@ dotnet run --project ./RegisterUserCollectMoreInfo.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/220825-RegisterUserCollectMoreInfo/
+cd src/apps/220825-RegisterUserCollectMoreInfo/
 
 dotnet tool update --global dotnet-ef
 

@@ -1,12 +1,12 @@
 
 cd ../../..
 
-cd src/exercises/200260-EmptyWebAppMiddleWareDelegates
+cd src/tasks/200260-EmptyWebAppMiddleWareDelegates
 
 pwd
 
-dotnet build ./../../dotnet-apps/200260-EmptyWebAppMiddleWareDelegates/EmptyWebAppMiddleWareDelegates.csproj
+dotnet build ./../../apps/200260-EmptyWebAppMiddleWareDelegates/EmptyWebAppMiddleWareDelegates.csproj
 
-dotnet run --project ./../../dotnet-apps/200260-EmptyWebAppMiddleWareDelegates/EmptyWebAppMiddleWareDelegates.csproj
+dotnet run --project ./../../apps/200260-EmptyWebAppMiddleWareDelegates/EmptyWebAppMiddleWareDelegates.csproj
 
 

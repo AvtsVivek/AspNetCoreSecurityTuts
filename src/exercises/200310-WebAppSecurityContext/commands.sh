@@ -1,7 +1,7 @@
 
 cd ../../..
 
-cd src/exercises/200310-WebAppSecurityContext
+cd src/tasks/200310-WebAppSecurityContext
 
 pwd
 
@@ -11,7 +11,7 @@ pwd
 
 cd ../../..
 
-cd src/dotnet-apps/200310-WebAppCookieAuthContextPrep
+cd src/apps/200310-WebAppCookieAuthContextPrep
 
 Set-Location ClientApp
 
@@ -27,9 +27,9 @@ dotnet run --project ./WebAppCookieAuthContextPrep.csproj
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/200310-WebAppCookieAuthContextPrep/WebAppCookieAuthContextPrep.csproj
+dotnet build ./../../apps/200310-WebAppCookieAuthContextPrep/WebAppCookieAuthContextPrep.csproj
 
-dotnet run --project ./../../dotnet-apps/200310-WebAppCookieAuthContextPrep/WebAppCookieAuthContextPrep.csproj
+dotnet run --project ./../../apps/200310-WebAppCookieAuthContextPrep/WebAppCookieAuthContextPrep.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.

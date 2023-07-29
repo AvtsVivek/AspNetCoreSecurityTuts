@@ -1,15 +1,15 @@
 
 cd ../../..
 
-cd src/exercises/200440-WebAppWpRememberMe
+cd src/tasks/200440-WebAppWpRememberMe
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/200440-WebAppWpRememberMe/WebAppWpRememberMe.csproj
+dotnet build ./../../apps/200440-WebAppWpRememberMe/WebAppWpRememberMe.csproj
 
-dotnet run --project ./../../dotnet-apps/200440-WebAppWpRememberMe/WebAppWpRememberMe.csproj
+dotnet run --project ./../../apps/200440-WebAppWpRememberMe/WebAppWpRememberMe.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/200440-WebAppWpRememberMe/WebAppWpRemem
 
 cd ../../..
 
-cd src/dotnet-apps/200440-WebAppWpRememberMe
+cd src/apps/200440-WebAppWpRememberMe
 
 Set-Location ClientApp
 

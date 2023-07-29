@@ -1,15 +1,15 @@
 
 cd ../../..
 
-cd src/exercises/200380-WebAppWebPackLogout
+cd src/tasks/200380-WebAppWebPackLogout
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/200380-WebAppWebPackLogout/WebAppWebPackLogout.csproj
+dotnet build ./../../apps/200380-WebAppWebPackLogout/WebAppWebPackLogout.csproj
 
-dotnet run --project ./../../dotnet-apps/200380-WebAppWebPackLogout/WebAppWebPackLogout.csproj
+dotnet run --project ./../../apps/200380-WebAppWebPackLogout/WebAppWebPackLogout.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/200380-WebAppWebPackLogout/WebAppWebPac
 
 cd ../../..
 
-cd src/dotnet-apps/200380-WebAppWebPackLogout
+cd src/apps/200380-WebAppWebPackLogout
 
 Set-Location ClientApp
 

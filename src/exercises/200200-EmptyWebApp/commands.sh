@@ -1,11 +1,11 @@
 
 cd ../../..
 
-cd src/exercises/200200-EmptyWebApp
+cd src/tasks/200200-EmptyWebApp
 
 pwd
 
-dotnet build ./../../dotnet-apps/200200-EmptyWebApp/EmptyWebApp.csproj
+dotnet build ./../../apps/200200-EmptyWebApp/EmptyWebApp.csproj
 
-dotnet run --project ./../../dotnet-apps/200200-EmptyWebApp/EmptyWebApp.csproj
+dotnet run --project ./../../apps/200200-EmptyWebApp/EmptyWebApp.csproj
 

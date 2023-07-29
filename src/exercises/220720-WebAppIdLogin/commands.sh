@@ -1,21 +1,21 @@
 
 cd ../../..
 
-cd src/exercises/220720-WebAppIdLogin
+cd src/tasks/220720-WebAppIdLogin
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.sln
+dotnet build ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.sln
 
-dotnet run --project ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
+dotnet run --project ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/220720-WebAppIdLogin/
+cd src/apps/220720-WebAppIdLogin/
 
 Set-Location ClientApp
 
@@ -33,9 +33,9 @@ dotnet run --project ./WebAppIdLogin.csproj
 
 # Open a new terminal.
 
-cd src/exercises/220720-WebAppIdLogin
+cd src/tasks/220720-WebAppIdLogin
 
-dotnet run --project ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
+dotnet run --project ./../../apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
 
 ################################################################################################
 
@@ -45,7 +45,7 @@ dotnet run --project ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.cspr
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd src/dotnet-apps/220720-WebAppIdLogin/
+cd src/apps/220720-WebAppIdLogin/
 
 dotnet tool update --global dotnet-ef
 

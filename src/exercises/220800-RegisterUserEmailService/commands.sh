@@ -1,7 +1,7 @@
 
 cd ../../..
 
-cd src/exercises/220800-RegisterUserEmailService
+cd src/tasks/220800-RegisterUserEmailService
 
 pwd
 
@@ -16,15 +16,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/220800-RegisterUserEmailService/RegisterUserEmailService.sln
+dotnet build ./../../apps/220800-RegisterUserEmailService/RegisterUserEmailService.sln
 
-dotnet run --project ./../../dotnet-apps/220800-RegisterUserEmailService/RegisterUserEmailService.csproj
+dotnet run --project ./../../apps/220800-RegisterUserEmailService/RegisterUserEmailService.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/220800-RegisterUserEmailService/
+cd src/apps/220800-RegisterUserEmailService/
 
 Set-Location ClientApp
 
@@ -50,7 +50,7 @@ dotnet run --project ./RegisterUserEmailService.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/220800-RegisterUserEmailService/
+cd src/apps/220800-RegisterUserEmailService/
 
 dotnet tool update --global dotnet-ef
 

@@ -1,7 +1,7 @@
 # Web App calls and gets data from a secured Web Api.
 
 - The web api is secured. The end point in this case is https://localhost:7038/WeatherForecast
-- The controller for this is ./../../dotnet-apps/20350-WebAppCallSecureApi/SecureApi/Controllers/WeatherForecastController.cs
+- The controller for this is ./../../apps/20350-WebAppCallSecureApi/SecureApi/Controllers/WeatherForecastController.cs
 - Note **[Authorize]** attribute on the WeatherForecastController class.
 - Also note the AddAuthentication in the Programm.cs file.
 

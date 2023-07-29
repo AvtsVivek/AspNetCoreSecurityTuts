@@ -1,15 +1,15 @@
 
 cd ../../..
 
-cd src/exercises/200400-WebAppWpCustomRequirement
+cd src/tasks/200400-WebAppWpCustomRequirement
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/200400-WebAppWpCustomRequirement/WebAppWpCustomRequirement.csproj
+dotnet build ./../../apps/200400-WebAppWpCustomRequirement/WebAppWpCustomRequirement.csproj
 
-dotnet run --project ./../../dotnet-apps/200400-WebAppWpCustomRequirement/WebAppWpCustomRequirement.csproj
+dotnet run --project ./../../apps/200400-WebAppWpCustomRequirement/WebAppWpCustomRequirement.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/200400-WebAppWpCustomRequirement/WebApp
 
 cd ../../..
 
-cd src/dotnet-apps/200400-WebAppWpCustomRequirement
+cd src/apps/200400-WebAppWpCustomRequirement
 
 Set-Location ClientApp
 

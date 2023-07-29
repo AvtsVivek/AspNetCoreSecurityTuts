@@ -1,7 +1,7 @@
 
 cd ../../..
 
-cd src/exercises/220840-RegisterUserAddClaims
+cd src/tasks/220840-RegisterUserAddClaims
 
 pwd
 
@@ -16,15 +16,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/220840-RegisterUserAddClaims/RegisterUserAddClaims.sln
+dotnet build ./../../apps/220840-RegisterUserAddClaims/RegisterUserAddClaims.sln
 
-dotnet run --project ./../../dotnet-apps/220840-RegisterUserAddClaims/RegisterUserAddClaims.csproj
+dotnet run --project ./../../apps/220840-RegisterUserAddClaims/RegisterUserAddClaims.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/220840-RegisterUserAddClaims/
+cd src/apps/220840-RegisterUserAddClaims/
 
 Set-Location ClientApp
 
@@ -50,7 +50,7 @@ dotnet run --project ./RegisterUserAddClaims.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/220840-RegisterUserAddClaims/
+cd src/apps/220840-RegisterUserAddClaims/
 
 dotnet tool update --global dotnet-ef
 

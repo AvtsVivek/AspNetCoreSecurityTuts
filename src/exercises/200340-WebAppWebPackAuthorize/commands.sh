@@ -1,15 +1,15 @@
 
 cd ../../..
 
-cd src/exercises/200340-WebAppWebPackAuthorize
+cd src/tasks/200340-WebAppWebPackAuthorize
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/200340-WebAppWebPackAuthorize/WebAppWebPackAuthorize.csproj
+dotnet build ./../../apps/200340-WebAppWebPackAuthorize/WebAppWebPackAuthorize.csproj
 
-dotnet run --project ./../../dotnet-apps/200340-WebAppWebPackAuthorize/WebAppWebPackAuthorize.csproj
+dotnet run --project ./../../apps/200340-WebAppWebPackAuthorize/WebAppWebPackAuthorize.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/200340-WebAppWebPackAuthorize/WebAppWeb
 
 cd ../../..
 
-cd src/dotnet-apps/200340-WebAppWebPackAuthorize
+cd src/apps/200340-WebAppWebPackAuthorize
 
 Set-Location ClientApp
 

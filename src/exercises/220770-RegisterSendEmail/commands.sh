@@ -1,7 +1,7 @@
 
 cd ../../..
 
-cd src/exercises/220770-RegisterSendEmail
+cd src/tasks/220770-RegisterSendEmail
 
 pwd
 
@@ -12,15 +12,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/220770-RegisterSendEmail/RegisterSendEmail.sln
+dotnet build ./../../apps/220770-RegisterSendEmail/RegisterSendEmail.sln
 
-dotnet run --project ./../../dotnet-apps/220770-RegisterSendEmail/RegisterSendEmail.csproj
+dotnet run --project ./../../apps/220770-RegisterSendEmail/RegisterSendEmail.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/220770-RegisterSendEmail/
+cd src/apps/220770-RegisterSendEmail/
 
 Set-Location ClientApp
 
@@ -46,7 +46,7 @@ dotnet run --project ./RegisterSendEmail.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/220770-RegisterSendEmail/
+cd src/apps/220770-RegisterSendEmail/
 
 dotnet tool update --global dotnet-ef
 

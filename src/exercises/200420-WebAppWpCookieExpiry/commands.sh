@@ -1,15 +1,15 @@
 
 cd ../../..
 
-cd src/exercises/200420-WebAppWpCookieExpiry
+cd src/tasks/200420-WebAppWpCookieExpiry
 
 pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/200420-WebAppWpCookieExpiry/WebAppWpCookieExpiry.csproj
+dotnet build ./../../apps/200420-WebAppWpCookieExpiry/WebAppWpCookieExpiry.csproj
 
-dotnet run --project ./../../dotnet-apps/200420-WebAppWpCookieExpiry/WebAppWpCookieExpiry.csproj
+dotnet run --project ./../../apps/200420-WebAppWpCookieExpiry/WebAppWpCookieExpiry.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
@@ -18,7 +18,7 @@ dotnet run --project ./../../dotnet-apps/200420-WebAppWpCookieExpiry/WebAppWpCoo
 
 cd ../../..
 
-cd src/dotnet-apps/200420-WebAppWpCookieExpiry
+cd src/apps/200420-WebAppWpCookieExpiry
 
 Set-Location ClientApp
 
