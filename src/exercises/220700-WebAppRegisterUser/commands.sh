@@ -7,15 +7,15 @@ pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20700-WebAppRegisterUser/WebAppRegisterUser.sln
+dotnet build ./../../dotnet-apps/220700-WebAppRegisterUser/WebAppRegisterUser.sln
 
-dotnet run --project ./../../dotnet-apps/20700-WebAppRegisterUser/WebAppRegisterUser.csproj
+dotnet run --project ./../../dotnet-apps/220700-WebAppRegisterUser/WebAppRegisterUser.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/20700-WebAppRegisterUser/
+cd src/dotnet-apps/220700-WebAppRegisterUser/
 
 Set-Location ClientApp
 
@@ -35,7 +35,7 @@ dotnet run --project ./WebAppRegisterUser.csproj
 
 cd src/exercises/220700-WebAppRegisterUser
 
-dotnet run --project ./../../dotnet-apps/20700-WebAppRegisterUser/WebAppRegisterUser.csproj
+dotnet run --project ./../../dotnet-apps/220700-WebAppRegisterUser/WebAppRegisterUser.csproj
 
 ################################################################################################
 
@@ -45,7 +45,7 @@ dotnet run --project ./../../dotnet-apps/20700-WebAppRegisterUser/WebAppRegister
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd src/dotnet-apps/20700-WebAppRegisterUser/
+cd src/dotnet-apps/220700-WebAppRegisterUser/
 
 dotnet tool update --global dotnet-ef
 

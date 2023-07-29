@@ -16,15 +16,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.sln
+dotnet build ./../../dotnet-apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.sln
 
-dotnet run --project ./../../dotnet-apps/20825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.csproj
+dotnet run --project ./../../dotnet-apps/220825-RegisterUserCollectMoreInfo/RegisterUserCollectMoreInfo.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/20825-RegisterUserCollectMoreInfo/
+cd src/dotnet-apps/220825-RegisterUserCollectMoreInfo/
 
 Set-Location ClientApp
 
@@ -50,7 +50,7 @@ dotnet run --project ./RegisterUserCollectMoreInfo.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/20825-RegisterUserCollectMoreInfo/
+cd src/dotnet-apps/220825-RegisterUserCollectMoreInfo/
 
 dotnet tool update --global dotnet-ef
 

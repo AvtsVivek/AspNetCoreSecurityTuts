@@ -7,21 +7,21 @@ pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20620-WebAppCallApiWithJwtPolicy/WebAppCallApiWithJwtPolicy.sln
+dotnet build ./../../dotnet-apps/220620-WebAppCallApiWithJwtPolicy/WebAppCallApiWithJwtPolicy.sln
 
-dotnet run --project ./../../dotnet-apps/20620-WebAppCallApiWithJwtPolicy/SecureApi/SecureApi.csproj
+dotnet run --project ./../../dotnet-apps/220620-WebAppCallApiWithJwtPolicy/SecureApi/SecureApi.csproj
 
 # Open a new terminal.
 
 cd src/exercises/220620-WebAppCallApiWithJwtPolicy
 
-dotnet run --project ./../../dotnet-apps/20620-WebAppCallApiWithJwtPolicy/WebApp/WebApp.csproj
+dotnet run --project ./../../dotnet-apps/220620-WebAppCallApiWithJwtPolicy/WebApp/WebApp.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/20620-WebAppCallApiWithJwtPolicy/
+cd src/dotnet-apps/220620-WebAppCallApiWithJwtPolicy/
 
 Set-Location WebApp
 
@@ -43,7 +43,7 @@ dotnet run --project ./../SecureApi/SecureApi.csproj
 
 cd src/exercises/220620-WebAppCallApiWithJwtPolicy
 
-dotnet run --project ./../../dotnet-apps/20620-WebAppCallApiWithJwtPolicy/WebApp/WebApp.csproj
+dotnet run --project ./../../dotnet-apps/220620-WebAppCallApiWithJwtPolicy/WebApp/WebApp.csproj
 
 ################################################################################################
 

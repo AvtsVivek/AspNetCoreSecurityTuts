@@ -7,15 +7,15 @@ pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20720-WebAppIdLogin/WebAppIdLogin.sln
+dotnet build ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.sln
 
-dotnet run --project ./../../dotnet-apps/20720-WebAppIdLogin/WebAppIdLogin.csproj
+dotnet run --project ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/20720-WebAppIdLogin/
+cd src/dotnet-apps/220720-WebAppIdLogin/
 
 Set-Location ClientApp
 
@@ -35,7 +35,7 @@ dotnet run --project ./WebAppIdLogin.csproj
 
 cd src/exercises/220720-WebAppIdLogin
 
-dotnet run --project ./../../dotnet-apps/20720-WebAppIdLogin/WebAppIdLogin.csproj
+dotnet run --project ./../../dotnet-apps/220720-WebAppIdLogin/WebAppIdLogin.csproj
 
 ################################################################################################
 
@@ -45,7 +45,7 @@ dotnet run --project ./../../dotnet-apps/20720-WebAppIdLogin/WebAppIdLogin.cspro
 # You can use the following command. CREATE DATABASE AspNetCoreId. If you want to drop and recreate, then 
 # DROP DATABASE AspNetCoreId
 
-cd src/dotnet-apps/20720-WebAppIdLogin/
+cd src/dotnet-apps/220720-WebAppIdLogin/
 
 dotnet tool update --global dotnet-ef
 

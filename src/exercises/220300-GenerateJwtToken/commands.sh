@@ -10,7 +10,7 @@ pwd
 # If you want to create the project from scratch.
 
 # First cd into the correct folder. Ensure first the folder is present.
-cd ./../../dotnet-apps/20300-GenerateJwtToken/
+cd ./../../dotnet-apps/220300-GenerateJwtToken/
 
 dotnet new sln --name GenerateJwtToken
 
@@ -41,9 +41,9 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20300-GenerateJwtToken/GenerateJwtToken.csproj
+dotnet build ./../../dotnet-apps/220300-GenerateJwtToken/GenerateJwtToken.csproj
 
-dotnet run --project ./../../dotnet-apps/20300-GenerateJwtToken/GenerateJwtToken.csproj
+dotnet run --project ./../../dotnet-apps/220300-GenerateJwtToken/GenerateJwtToken.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.

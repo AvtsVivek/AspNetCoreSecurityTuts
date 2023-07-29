@@ -7,21 +7,21 @@ pwd
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20350-WebAppCallSecureApi/WebAppCallSecureApi.sln
+dotnet build ./../../dotnet-apps/220350-WebAppCallSecureApi/WebAppCallSecureApi.sln
 
-dotnet run --project ./../../dotnet-apps/20350-WebAppCallSecureApi/SecureApi/SecureApi.csproj
+dotnet run --project ./../../dotnet-apps/220350-WebAppCallSecureApi/SecureApi/SecureApi.csproj
 
 # Open a new terminal.
 
 cd src/exercises/220350-WebAppCallSecureApi
 
-dotnet run --project ./../../dotnet-apps/20350-WebAppCallSecureApi/WebApp/WebApp.csproj
+dotnet run --project ./../../dotnet-apps/220350-WebAppCallSecureApi/WebApp/WebApp.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/20350-WebAppCallSecureApi/
+cd src/dotnet-apps/220350-WebAppCallSecureApi/
 
 Set-Location WebApp
 
@@ -43,7 +43,7 @@ dotnet run --project ./../SecureApi/SecureApi.csproj
 
 cd src/exercises/220350-WebAppCallSecureApi
 
-dotnet run --project ./../../dotnet-apps/20350-WebAppCallSecureApi/WebApp/WebApp.csproj
+dotnet run --project ./../../dotnet-apps/220350-WebAppCallSecureApi/WebApp/WebApp.csproj
 
 ################################################################################################
 

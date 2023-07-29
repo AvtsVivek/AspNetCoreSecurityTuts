@@ -16,15 +16,15 @@ start http://localhost:8025
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/20800-RegisterUserEmailService/RegisterUserEmailService.sln
+dotnet build ./../../dotnet-apps/220800-RegisterUserEmailService/RegisterUserEmailService.sln
 
-dotnet run --project ./../../dotnet-apps/20800-RegisterUserEmailService/RegisterUserEmailService.csproj
+dotnet run --project ./../../dotnet-apps/220800-RegisterUserEmailService/RegisterUserEmailService.csproj
 
 ################################################################################################
 
 cd ../../..
 
-cd src/dotnet-apps/20800-RegisterUserEmailService/
+cd src/dotnet-apps/220800-RegisterUserEmailService/
 
 Set-Location ClientApp
 
@@ -50,7 +50,7 @@ dotnet run --project ./RegisterUserEmailService.csproj
 
 cd ../../..
 
-cd src/dotnet-apps/20800-RegisterUserEmailService/
+cd src/dotnet-apps/220800-RegisterUserEmailService/
 
 dotnet tool update --global dotnet-ef
 
