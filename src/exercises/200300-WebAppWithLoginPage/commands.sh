@@ -10,7 +10,7 @@ pwd
 # If you want to create the project from scratch. We will not be using this approach. We will be using web pack approach.
 
 # First cd into the correct folder. Ensure first the folder is present.
-cd ./../../dotnet-apps/00300-WebAppWithLoginPage/
+cd ./../../dotnet-apps/200300-WebAppWithLoginPage/
 
 dotnet new sln --name WebAppWithLoginPage 
 
@@ -39,7 +39,7 @@ cd ./../../exercises/200300-WebAppWithLoginPage/
 
 cd ../../..
 
-cd src/dotnet-apps/00300-WebAppWithLoginPage
+cd src/dotnet-apps/200300-WebAppWithLoginPage
 
 Set-Location ClientApp
 
@@ -55,9 +55,9 @@ dotnet run --project ./WebAppWithLoginPage.csproj
 
 ################################################################################################
 
-dotnet build ./../../dotnet-apps/00300-WebAppWithLoginPage/WebAppWithLoginPage.csproj
+dotnet build ./../../dotnet-apps/200300-WebAppWithLoginPage/WebAppWithLoginPage.csproj
 
-dotnet run --project ./../../dotnet-apps/00300-WebAppWithLoginPage/WebAppWithLoginPage.csproj
+dotnet run --project ./../../dotnet-apps/200300-WebAppWithLoginPage/WebAppWithLoginPage.csproj
 
 # Once the app is up and running, browse it, then go to the login page. Enter creds.
 # See them in the Terminal.
